@@ -25,7 +25,7 @@ echo "============================================"
 echo "   Start building hibench-base image...     "
 echo "============================================"
 bash ${CUR_DIR}/gen_base_dockerfile.sh
-sudo docker build -t hibench-base ${HOME_DIR}/base/
+sudo docker build --network=host -t hibench-base ${HOME_DIR}/base/
 }
 
 function second-step() {
@@ -38,12 +38,12 @@ case "$1" in
   "cdh")
      build-base
      second-step
-     sudo docker build -t hibench-docker-cdh ${HOME_DIR}/cdh-docker/
+     sudo docker build --network=host -t hibench-docker-cdh ${HOME_DIR}/cdh-docker/
      ;;
   "open-source")
      build-base
      second-step
-     sudo docker build -t hibench-docker-opensource ${HOME_DIR}/opensource-docker/
+     sudo docker build --network=host -t hibench-docker-opensource ${HOME_DIR}/opensource-docker/
      ;;
   *)
      exit 1
