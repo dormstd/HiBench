@@ -11,6 +11,8 @@ RUN \
   sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
   apt-get update && \
   apt-get -y upgrade && \
+  apt-get install -y apt-utils && \
+  apt-get install -y locales && \
   apt-get install -y build-essential && \
   apt-get install -y software-properties-common && \
   apt-get install -y git wget curl man unzip vim-tiny bc 
