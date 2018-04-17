@@ -52,6 +52,8 @@ RUN rm -f hadoop-*.tar.gz
 ENV SPARK_HOME /usr/local/spark-${SPARK_VERSION_DETAIL}
 ENV SPARK_MASTER_IP localhost
 
+RUN ln -s /usr/bin/python2.7 /usr/bin/python2
+
 # download spark
 RUN wget http://d3kbcqa49mib13.cloudfront.net/spark-${SPARK_VERSION_DETAIL}-bin-hadoop${HADOOP_FOR_SPARK_VERSION}.tgz 
 RUN tar xzf spark-*.tgz -C /usr/local
