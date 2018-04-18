@@ -19,23 +19,14 @@
 	<property>
 		<name>yarn.nodemanager.aux-services</name>
 		<value>mapreduce_shuffle</value>
-	</property>
-	<property>
-		<name>yarn.nodemanager.disk-health-checker.min-healthy-disks</name>
-		<value>0</value>
-	</property>
-	<property>
-		<name>yarn.nodemanager.resource.memory-mb</name>
-		<value>2200</value>
-		<description>Physical memory, in MB, to be made available to running containers</description>
-	</property>
+	</property>>
 	<property>
 		<name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
 		<value>org.apache.hadoop.mapred.ShuffleHandler</value>
 	</property>
 	<property>
 		<name>yarn.resourcemanager.address</name>
-		<value>localhost:8032</value>
+		<value>localhost</value>
 	</property>
 </configuration>
 
