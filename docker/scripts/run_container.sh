@@ -44,5 +44,5 @@ then
    sudo docker run -t hibench-docker-cdh /bin/bash -c '/root/runexample.sh'
 elif [ "$1" == "open-source" ]
 then
-   sudo docker run -p 8032:8032 -t hibench-docker-opensource /bin/bash -c '/root/runexample.sh'
+   sudo docker run -p 8032:8032 -p 8088:8088 -t hibench-docker-opensource /bin/bash -c '/root/runexample.sh'
 fi
