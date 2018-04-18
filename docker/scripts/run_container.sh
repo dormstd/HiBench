@@ -41,8 +41,8 @@ fi
 # Format: sudo docker run (-v "LocalLargeDiskDir:/usr/loal"-it) hibench-hadoop-spark /bin/bash /root/HiBench/workloads/<workload-name>/prepare/prepare.sh
 if [ "$1" == "cdh" ]
 then
-   sudo docker run -t hibench-docker-cdh /bin/bash -c '/root/runexample.sh'
+   sudo docker run --net=host -t hibench-docker-cdh /bin/bash -c '/root/runexample.sh'
 elif [ "$1" == "open-source" ]
 then
-   sudo docker run -t hibench-docker-opensource /bin/bash -c '/root/runexample.sh'
+   sudo docker run --net=host -t hibench-docker-opensource /bin/bash -c '/root/runexample.sh'
 fi
